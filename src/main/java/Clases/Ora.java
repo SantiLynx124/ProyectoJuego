@@ -35,7 +35,7 @@ public enum Ora implements  Secuencia{
                 return o;
             }
         }
-        throw new IllegalArgumentException("Secuencia inválida para Ora: " + secuencia);
+        throw new IllegalArgumentException("Secuencia inválida para Ora: " + secuencia);//hola
     }
     
     
