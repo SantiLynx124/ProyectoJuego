@@ -5,7 +5,6 @@
 package com.mycompany.lectura;
 
 import java.io.IOException;
-import Clases.Player;
 
 /**
  *

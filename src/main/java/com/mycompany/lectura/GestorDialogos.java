@@ -63,6 +63,7 @@ public class GestorDialogos {
         resultado = resultado.replaceAll("\\[ap\\]", p.getApellidoP());
         resultado = resultado.replaceAll("\\[am\\]", p.getApellidoM());
         resultado = resultado.replaceAll("\\[c\\]", p.getCamino().name());
+        resultado = resultado.replaceAll("\\[s\\]", p.getSecuencia().toString());
         return resultado;
     }
 }
