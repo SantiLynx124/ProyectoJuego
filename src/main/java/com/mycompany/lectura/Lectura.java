@@ -4,6 +4,8 @@
 
 package com.mycompany.lectura;
 
+import Clases.Player;
+
 import java.io.IOException;
 
 /**
@@ -13,7 +15,7 @@ import java.io.IOException;
 public class Lectura {
 
     public static void main(String[] args) throws IOException  {
-        GestorDialogos g = new GestorDialogos();
+        GestorDialogos g = new GestorDialogos(Player.player());
         g.dialogos("Dialogo.csv", "Opciones.csv");
     }
 }

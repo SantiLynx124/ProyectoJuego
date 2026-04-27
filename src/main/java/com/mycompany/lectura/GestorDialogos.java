@@ -15,17 +15,23 @@ import java.util.Scanner;
  */
 public class GestorDialogos {
     private Grafo grafo = new Grafo();
-    private Player p = new Player("Santi", "Huaman", "Reyes", Camino.Imitador);
+    private Player p;
     static Scanner sc = new Scanner(System.in);
 
     public Grafo getGrafo() {
+
         return grafo;
     }
 
     public void setGrafo(Grafo grafo) {
+
         this.grafo = grafo;
     }
-    
+
+    public GestorDialogos(Player p) {
+        this.p = p;
+    }
+
     public void dialogos(String dialogos, String opciones) throws IOException{
         int nextId= 0;
         NodoDialogo nodo;
@@ -66,4 +72,5 @@ public class GestorDialogos {
         resultado = resultado.replaceAll("\\[s\\]", p.getSecuencia().toString());
         return resultado;
     }
+
 }
