@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 public class GestorDialogos {
     private Grafo grafo = new Grafo();
-    private Player p;
+    private final Player p;
     static Scanner sc = new Scanner(System.in);
 
     public Grafo getGrafo() {
@@ -64,12 +64,12 @@ public class GestorDialogos {
     }
     
     public String ReemplazoCorchetes(String txt) {
-        String resultado = txt.replaceAll("\\[n\\]", p.getNombre());
-        resultado = resultado.replaceAll("\\[N\\]", p.getNombreCompleto());
-        resultado = resultado.replaceAll("\\[ap\\]", p.getApellidoP());
-        resultado = resultado.replaceAll("\\[am\\]", p.getApellidoM());
-        resultado = resultado.replaceAll("\\[c\\]", p.getCamino().name());
-        resultado = resultado.replaceAll("\\[s\\]", p.getSecuencia().toString());
+        String resultado = txt.replaceAll("\\[n]", p.getNombre());
+        resultado = resultado.replaceAll("\\[N]", p.getNombreCompleto());
+        resultado = resultado.replaceAll("\\[ap]", p.getApellidoP());
+        resultado = resultado.replaceAll("\\[am]", p.getApellidoM());
+        resultado = resultado.replaceAll("\\[c]", p.getCamino().name());
+        resultado = resultado.replaceAll("\\[s]", p.getSecuencia().toString());
         return resultado;
     }
 
